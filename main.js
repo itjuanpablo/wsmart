@@ -6,9 +6,9 @@ function onScroll() {
   showBackToTopButtonOnScroll()
 
   activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(products)
   activateMenuAtCurrentSection(about)
-  activateMenuAtCurrentSection(contact)
+  activateMenuAtCurrentSection(testimonials)
 
   // Atualiza o link do botão de WhatsApp
   updateWhatsAppLink()
@@ -84,12 +84,12 @@ ScrollReveal({
   distance: '30px',
   duration: 700
 }).reveal(`
-  #home, 
-  #home img, 
-  #home .stats, 
+  #home,
+  #home img,
+  #home .stats,
   #services,
   #services header,
   #services .card
-  #about, 
-  #about header, 
+  #about,
+  #about header,
   #about .content`)

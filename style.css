@@ -144,7 +144,7 @@ section .content p {
 }
 
 /* custom colors */
-#services .card circle {
+#products .card circle {
   fill: var(--brand-light);
 }
 
@@ -154,7 +154,7 @@ section .content p {
 }
 
 button.open-menu path[stroke*='#00856F'],
-#contact li path {
+#testimonials li path {
   stroke: var(--primary-color);
 }
 
@@ -375,53 +375,6 @@ body.menu-expanded button path {
   line-height: 150%;
 }
 
-/*=== SERVICES =================================*/
-#services {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-#services header h2 {
-  margin-bottom: 6rem;
-  margin-top: -8rem;
-}
-
-#services .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
-}
-
-#services .card {
-  padding: 2.4rem;
-  text-align: left;
-
-  background: white;
-
-  border: 1px solid var(--brand-light);
-  border-radius: 0.6rem;
-}
-
-#services .img-card {
-  max-width: 100%;
-  height: auto;
-  /* padding: 10px; */
-  /* margin-bottom: 10px; */
-}
-
-.card {
-  transition: transform .3s ease-out;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-#services .card h3 {
-  margin-block: 1.6rem;
-  text-align: center;
-}
-
 /*=== ABOUT =================================*/
 #about {
   text-align: left;
@@ -458,17 +411,17 @@ body.menu-expanded button path {
   margin-left: -1rem;
 }
 
-/*=== CONTACT =================================*/
-#contact {
+/*=== testimonials =================================*/
+#testimonials {
   text-align: left;
-  margin-top: -15rem;
+  margin-top: 2rem;
 }
 
-#contact header {
+#testimonials header {
   margin-bottom: 3.2rem;
 }
 
-#contact ul {
+#testimonials ul {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -476,10 +429,58 @@ body.menu-expanded button path {
   margin-bottom: 3.2rem;
 }
 
-#contact ul li {
+#testimonials ul li {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+/*=== products =================================*/
+#products {
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: -7rem;
+}
+
+#products header h2 {
+  margin-bottom: 6rem;
+  margin-top: -8rem;
+}
+
+#products .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#products .card {
+  padding: 2.4rem;
+  text-align: left;
+
+  background: white;
+
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+}
+
+#products .img-card {
+  max-width: 100%;
+  height: auto;
+  /* padding: 10px; */
+  /* margin-bottom: 10px; */
+}
+
+.card {
+  transition: transform .3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#products .card h3 {
+  margin-block: 1.6rem;
+  text-align: center;
 }
 
 /*=== FOOTER =================================*/
@@ -745,19 +746,19 @@ footer a {
     width: 42rem;
   }
 
-  /*=== SERVICES =================================*/
-  #services h2 {
+  /*=== products =================================*/
+  #products h2 {
     width: 47rem;
     margin-inline: auto;
   }
 
-  #services .cards {
+  #products .cards {
     flex-direction: row;
     /* flex-wrap: wrap; */
     gap: 4rem;
   }
 
-  #services .card {
+  #products .card {
     width: 30%;
     flex-grow: 1;
   }
@@ -786,24 +787,24 @@ footer a {
     margin-bottom: 0;
   }
 
-  /*=== CONTACT =================================*/
+  /*=== testimonials =================================*/
 
-  #contact .wrapper {
+  #testimonials .wrapper {
     grid-template-columns: 1fr 57.5rem;
     grid-template-areas: 'A B';
   }
 
-  #contact h2 {
+  #testimonials h2 {
     width: 40.4rem;
   }
 
-  #contact ul li a {
+  #testimonials ul li a {
     cursor: pointer;
     text-decoration: none;
     color: var(--brand-dark);
   }
 
-  #contact ul li a:hover {
+  #testimonials ul li a:hover {
     opacity: 0.7;
   }
 
