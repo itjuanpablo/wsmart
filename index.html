@@ -6,14 +6,17 @@
     <title>WSMART</title>
     
     
+    
+
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;800&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;800&display=swap"
+      rel="stylesheet"
     />
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
 
     <link
       rel="stylesheet"
@@ -21,8 +24,9 @@
     />
     <script src="src/js/script.js" defer></script>
 
-
     <script src="/src/js/main.js"></script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
   <body>
     <nav id="navigation">
@@ -39,7 +43,9 @@
             <li>
               <a onclick="closeMenu()" href="#about">Quem somos</a>
             </li>
-            <li><a onclick="closeMenu()" href="#testimonials">Depoimentos</a></li>
+            <li>
+              <a onclick="closeMenu()" href="#testimonials">Depoimentos</a>
+            </li>
             <li><a onclick="closeMenu()" href="#products">Produtos</a></li>
           </ul>
 
@@ -186,14 +192,22 @@
               Não deixe a concorrência sair na frente. Clique agora mesmo no
               botão de WhatsApp e converse com nossos especialistas!
             </p>
-            <a class="button button-initial btn-animation" href="https://wa.me/5511911781112">
+            <a
+              class="button button-initial btn-animation"
+              href="https://wa.me/5511911781112"
+            >
               Fale conosco
             </a>
           </div>
         </div>
 
         <div class="col-b">
-          <img src="/assets/Iphone.png" alt="Imagem Iphone" class="img-iphone" style="width: 810px; height: auto;"/>
+          <img
+            src="/assets/Iphone.png"
+            alt="Imagem Iphone"
+            class="img-iphone"
+            style="width: 810px; height: auto"
+          />
         </div>
       </div>
     </section>
@@ -217,7 +231,7 @@
               conhecimento do mercado, temos a credibilidade para ser seu
               parceiro de negócios de confiança.
             </p>
-           <a
+            <a
               class="button btn-about btn-animation"
               target="_blank"
               id="whatsapp-btn"
@@ -225,12 +239,15 @@
             >
               Fale conosco
             </a>
-
           </div>
         </div>
 
         <div class="col-b">
-          <img src="assets/WSmart_Loja_.png" alt="Imagem Loja Wsmart" class="img-person"/>
+          <img
+            src="assets/WSmart_Loja_.png"
+            alt="Imagem Loja Wsmart"
+            class="img-person"
+          />
         </div>
       </div>
     </section>
@@ -256,23 +273,16 @@
         </div>
         
         <div class="col-b">
-          <section class="wrapper-2">
-            <i class="fa-solid fa-arrow-left button" id="prev"></i>
-            <div class="image-container">
-              <div class="carousel">
-                <img src="/assets/Depoimentos/Gustavo.png" alt="" />
-                <img src="/assets/Depoimentos/Ju-(Junia).png" alt="" />
-                <img src="/assets/Depoimentos/Juliana.png" alt="" />
-                <img src="/assets/Depoimentos/Silvia.png" alt="" />
-                <img src="/assets/Depoimentos/Thaynara.png" alt="" />
-                <img src="/assets/Depoimentos/Thi.png" alt="" />
-              </div>
-              <i class="fa-solid fa-arrow-right button" id="next"></i>
+          <div class="slider">
+            <img id="slide-img" class="active" src="/assets/Depoimentos/Gustavo.png" alt="">
+            <div class="btn">
+              <button onclick="back()"><box-icon class="icon" name='chevron-left'></box-icon></button>
+              <button onclick="next()"><box-icon class="icon" name='chevron-right'></box-icon></button>
             </div>
-          </section>
+          </div>
         </div>
-    </section>
-
+    </section> 
+    
     <section id="products">
       <div class="wrapper">
         <header>
@@ -292,17 +302,29 @@
             </div>
 
             <div class="card">
-              <img class="img-card" src="/assets/Produtos/macbook.png" alt="Imagem Macbook">
+              <img
+                class="img-card"
+                src="/assets/Produtos/macbook.png"
+                alt="Imagem Macbook"
+              />
               <h3>Macbooks</h3>
             </div>
 
             <div class="card">
-              <img class="img-card" src="/assets/Produtos/ipad.png" alt="Imagem Ipad">
+              <img
+                class="img-card"
+                src="/assets/Produtos/ipad.png"
+                alt="Imagem Ipad"
+              />
               <h3>Ipad</h3>
             </div>
 
             <div class="card">
-              <img class="img-card" src="/assets/Produtos/airpods.png" alt="Imagem Airpods">
+              <img
+                class="img-card"
+                src="/assets/Produtos/airpods.png"
+                alt="Imagem Airpods"
+              />
               <h3>Airpods</h3>
             </div>
 
@@ -330,7 +352,7 @@
       <div class="wrapper">
         <div class="col-a">
           <a class="logo" href="#home">
-            <img  class="logo-img"src="/assets/Logo.png" alt="logo wsmart">
+            <img class="logo-img" src="/assets/Logo.png" alt="logo wsmart" />
           </a>
 
           <p>
@@ -342,8 +364,12 @@
               href="https://github.com/itjuanpablo"
               >itjuanpablo</a
             >
-            em parceria com <a href="https://instagram.com/ynove_?igshid=YmMyMTA2M2Y=" target="_blank">@ynove_</a>
-
+            em parceria com
+            <a
+              href="https://instagram.com/ynove_?igshid=YmMyMTA2M2Y="
+              target="_blank"
+              >@ynove_</a
+            >
           </p>
         </div>
 
@@ -352,28 +378,27 @@
             <li>
               <a target="_blank" href="mailto:teste@gmail.com">
                 <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                  stroke="#FFFF"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M22 6L12 13L2 6"
-                  stroke="#FFFF"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="#FFFF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="#FFFF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </a>
             </li>
 
@@ -465,6 +490,5 @@
 
     <!-- ScrollReaveal Lib -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
   </body>
 </html>

@@ -1,48 +1,89 @@
-// Get the DOM elements for the image carousel
-const wrapper = document.querySelector('.wrapper'),
-  carousel = document.querySelector('.carousel'),
-  images = document.querySelectorAll('img'),
-  buttons = document.querySelectorAll('.button')
+// var imgslide = document.getElementById('slide-img')
 
-let imageIndex = 1,
-  intervalId
+// var images = [
+//   '/assets/Depoimentos/Gustavo.png',
+//   '/assets/Depoimentos/Ju-(Junia).png',
+//   '/assets/Depoimentos/Juliana.png',
+//   '/assets/Depoimentos/Silvia.png',
+//   '/assets/Depoimentos/Thaynara.png',
+//   '/assets/Depoimentos/Thi.png'
+// ]
 
-// Define function to start automatic image slider
-const autoSlide = () => {
-  // Start the slideshow by calling slideImage() every 2 seconds
-  intervalId = setInterval(() => slideImage(++imageIndex), 60000)
+// var num = 0
+
+// function next() {
+//   num++
+//   if (num >= images.length) {
+//     num = 0
+//     imgslide.src = images[num]
+//   } else {
+//     imgslide.src = images[num]
+//   }
+// }
+
+// function back() {
+//   num--
+//   if (num <= 0) {
+//     num = images.length - 1
+//     currentImg.src = images[num]
+//   } else {
+//     currentImg.src = images[num]
+//   }
+// }
+
+// // Adicionar transição automática a cada 1 minuto
+// setInterval(function () {
+//   next()
+// }, 2000)
+
+var imgslide = document.getElementById('slide-img')
+var images = [
+  '/assets/Depoimentos/Gustavo.png',
+  '/assets/Depoimentos/Ju-(Junia).png',
+  '/assets/Depoimentos/Juliana.png',
+  '/assets/Depoimentos/Silvia.png',
+  '/assets/Depoimentos/Thaynara.png',
+  '/assets/Depoimentos/Thi.png'
+]
+var num = 0
+
+function next() {
+  num++
+  if (num >= images.length) {
+    num = 0
+    imgslide.src = images[num]
+  } else {
+    imgslide.src = images[num]
+  }
+  updateActiveClass()
 }
-// Call autoSlide function on page load
-autoSlide()
 
-// A function that updates the carousel display to show the specified image
-const slideImage = () => {
-  // Calculate the updated image index
-  imageIndex =
-    imageIndex === images.length
-      ? 0
-      : imageIndex < 0
-      ? images.length - 1
-      : imageIndex
-  // Update the carousel display to show the specified image
-  carousel.style.transform = `translate(-${imageIndex * 100}%)`
+function back() {
+  num--
+  if (num <= 0) {
+    num = images.length - 1
+    imgslide.src = images[num]
+  } else {
+    imgslide.src = images[num]
+  }
+  updateActiveClass()
 }
 
-// A function that updates the carousel display to show the next or previous image
-const updateClick = e => {
-  // Stop the automatic slideshow
-  clearInterval(intervalId)
-  // Calculate the updated image index based on the button clicked
-  imageIndex += e.target.id === 'next' ? 1 : -1
-  slideImage(imageIndex)
-  // Restart the automatic slideshow
-  autoSlide()
+function updateActiveClass() {
+  // remove a classe active de todas as imagens
+  var allImages = document.querySelectorAll('.slider img')
+  allImages.forEach(function (image) {
+    image.classList.remove('active')
+  })
+
+  // adiciona a classe active na imagem atual
+  var currentImage = document.querySelector(
+    '.slider img:nth-child(' + (num + 1) + ')'
+  )
+  currentImage.classList.add('active')
 }
 
-// Add event listeners to the navigation buttons
-buttons.forEach(button => button.addEventListener('click', updateClick))
-
-// Add mouseover event listener to wrapper element to stop auto sliding
-wrapper.addEventListener('mouseover', () => clearInterval(intervalId))
-// Add mouseleave event listener to wrapper element to start auto sliding again
-wrapper.addEventListener('mouseleave', autoSlide)
+// Adicionar transição automática a cada 1 minuto
+setInterval(function () {
+  next()
+}, 60000)
