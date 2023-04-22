@@ -9,24 +9,7 @@ function onScroll() {
   activateMenuAtCurrentSection(products)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(testimonials)
-
-  // Atualiza o link do botão de WhatsApp
-  updateWhatsAppLink()
 }
-
-function updateWhatsAppLink() {
-  const whatsappLink = document.getElementById('whatsapp-btn')
-  const now = new Date()
-  const currentHour = now.getHours()
-
-  if (currentHour >= 8 && currentHour < 18) {
-    whatsappLink.setAttribute('href', 'https://wa.me/5511911781112')
-  } else {
-    whatsappLink.setAttribute('href', 'https://wa.me/5511997452161')
-  }
-}
-
-window.onload = updateWhatsAppLink
 
 function activateMenuAtCurrentSection(section) {
   const targetLine = scrollY + innerHeight / 2
