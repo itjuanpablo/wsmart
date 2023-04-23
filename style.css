@@ -879,4 +879,12 @@ footer a {
   .cards .card:last-child {
     display: none;
   }
+
+  #testimonials .slider {
+    max-width: 100%;
+  }
+
+  #slide-img {
+    max-width: 100%;
+  }
 }
