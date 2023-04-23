@@ -86,4 +86,4 @@ function updateActiveClass() {
 // Adicionar transição automática a cada 1 minuto
 setInterval(function () {
   next()
-}, 60000)
+}, 45000)

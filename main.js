@@ -6,9 +6,9 @@ function onScroll() {
   showBackToTopButtonOnScroll()
 
   activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(products)
+  activateMenuAtCurrentSection(services)
   activateMenuAtCurrentSection(about)
-  activateMenuAtCurrentSection(testimonials)
+  activateMenuAtCurrentSection(contact)
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -67,12 +67,12 @@ ScrollReveal({
   distance: '30px',
   duration: 700
 }).reveal(`
-  #home,
-  #home img,
-  #home .stats,
+  #home, 
+  #home img, 
+  #home .stats, 
   #services,
   #services header,
   #services .card
-  #about,
-  #about header,
+  #about, 
+  #about header, 
   #about .content`)
