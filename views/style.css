@@ -200,7 +200,7 @@ nav {
 }
 
 .logo-img {
-  width: 105px;
+  width: 120px;
 }
 
 nav .wrapper {
@@ -420,6 +420,9 @@ body.menu-expanded button path {
 
 #products .card h3 {
   margin-block: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*=== ABOUT =================================*/
@@ -479,16 +482,16 @@ body.menu-expanded button path {
   position: relative;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  background: #f3f3f3f5; /* Cor do fundo do slider */
+  background: white; /* Cor do fundo do slider */
 }
 
 #testimonials .slider img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   border-radius: 7px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
   /* opacity: 0; */
   transition: opacity 0.2s ease-in-out;
   /* Transição suave entre as imagens */
@@ -530,7 +533,7 @@ body.menu-expanded button path {
 }
 
 #testimonials .btn button .icon {
-  font-size: 70px;
+  font-size: 100px;
 }
 
 #testimonials .btn button:hover .icon {
@@ -547,9 +550,10 @@ footer {
   color: white;
 }
 
-footer .logo {
+footer .logo img {
   display: inline-block;
   margin-bottom: 2.4rem;
+  width: 20rem;
 }
 
 footer .logo svg {
@@ -685,7 +689,7 @@ footer a {
   }
 
   nav#navigation .menu a.button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--whatsapp-hover);
     border: none;
     color: white;
   }
@@ -882,12 +886,11 @@ footer a {
   }
 
   #testimonials .slider {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   #slide-img img {
-    width: 1000px;
-    height: auto;
-    object-fit: contain; /* manter a proporção original */
+    width: 80%;
+    /* height: auto; */
   }
 }

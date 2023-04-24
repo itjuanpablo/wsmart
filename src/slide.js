@@ -1,11 +1,11 @@
 var imgslide = document.getElementById('slide-img')
 var images = [
-  '/assets/Depoimentos/Gustavo.png',
-  '/assets/Depoimentos/Ju-(Junia).png',
-  '/assets/Depoimentos/Juliana.png',
-  '/assets/Depoimentos/Silvia.png',
-  '/assets/Depoimentos/Thaynara.png',
-  '/assets/Depoimentos/Thi.png'
+  '/assets/depoimentos wsmart/Gustavo.png',
+  '/assets/depoimentos wsmart/Junia.png',
+  '/assets/depoimentos wsmart/Silvia.png',
+  '/assets/depoimentos wsmart/Juliana.png',
+  '/assets/depoimentos wsmart/Thaynara.png',
+  '/assets/depoimentos wsmart/Thiago.png'
 ]
 var num = 0
 
